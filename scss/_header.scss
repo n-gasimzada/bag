@@ -1,0 +1,118 @@
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0px 15px;
+    }
+
+    .header {
+        background-color: #2F2F2F;
+        min-height: 86px;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 86px;
+        padding: 30px 0px 0px;
+
+        &__list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width:767.98px) {
+                padding-top: 100px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: #2F2F2F;
+                font-size: 24px;
+                z-index: 5;
+                transform: translateY(-100%);
+                transition: all 0.5s ease;
+            }
+        }
+
+        &__list--active {
+            transform: translateY(0%);
+        }
+
+        &__item {
+            margin-right: 40px;
+
+            &:last-child {
+                padding-left: 50px;
+                margin-right: 0px;
+            }
+
+            @media(max-width: 767.98px) {
+                margin-right: 0px;
+                padding-left: 0px;
+            }
+        }
+
+        &__link {
+            color: #fff;
+            line-height: 160%;
+            
+            &:hover {
+                color: #F59B00;
+                transition: 0.2s ease;
+            }
+        }
+
+        .button {
+            color: #fff;
+            font-weight: 500;
+            line-height: 120%;
+            background-color: #F59B00;
+            border-radius: 5px;
+            padding: 15px 30px;
+
+            &:hover {
+                color: #2F2F2F;
+                transition: 0.2s ease;
+            }
+
+            @media (max-width: 767.98px) {
+                position: absolute;
+                top: 30px;
+                right: 70px;
+            }
+        }
+
+        .menu-btn {
+            background-color: transparent;
+            width: 30px;
+            height: 17px;
+            display: flex;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+
+            span {
+                background-color: #fff;
+                height: 2px;
+                width: 25px;
+            }
+
+            @media (max-width: 767.98px) {
+                display: flex;
+                z-index: 10;
+            }
+        }
+    }
+}
