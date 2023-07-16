@@ -7,6 +7,11 @@
         max-width: 1180px;
         margin: 0 auto;
         padding: 0px 15px;
+
+        @media (max-width: 767.98px) {
+            max-width: none;
+            margin: 0;
+        }
     }
 
     .header {
@@ -20,6 +25,10 @@
         align-items: center;
         min-height: 86px;
         padding: 30px 0px 0px;
+
+        &__logo {
+            z-index: 7;
+        }
 
         &__list {
             display: flex;
@@ -67,25 +76,14 @@
         &__link {
             color: #fff;
             line-height: 160%;
-            
+
             &:hover {
                 color: #F59B00;
                 transition: 0.2s ease;
             }
         }
 
-        .button {
-            color: #fff;
-            font-weight: 500;
-            line-height: 120%;
-            background-color: #F59B00;
-            border-radius: 5px;
-            padding: 15px 30px;
-
-            &:hover {
-                color: #2F2F2F;
-                transition: 0.2s ease;
-            }
+        &__button {
 
             @media (max-width: 767.98px) {
                 position: absolute;
@@ -114,5 +112,19 @@
                 z-index: 10;
             }
         }
+    }
+}
+
+.button {
+    color: #fff;
+    font-weight: 500;
+    line-height: 120%;
+    background-color: #F59B00;
+    border-radius: 5px;
+    padding: 15px 30px;
+
+    &:hover {
+        color: #2F2F2F;
+        transition: 0.2s ease;
     }
 }
